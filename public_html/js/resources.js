@@ -6,6 +6,7 @@
 	 */
         { name: "background-tiles", type: "image", src: "data/img/background-tiles.png" },
         { name: "player1-spritesheet",type:"image", src:"data/img/player1-spritesheet.png" },
+        { name: "solid-tile", type:"image", src:"data/img/solid-tile.png"},
 
 	/* Atlases 
 	 * @example
