@@ -13,6 +13,8 @@ game.PlayerEntity = me.ObjectEntity.extend({
        this.renderable.setCurrentAnimation("idle");
        
        this.setVelocity(5, 20);
+       this.setVelocity(5, 20);
+       this.setVelocity(5, 20);
        
        me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
        
@@ -22,7 +24,11 @@ game.PlayerEntity = me.ObjectEntity.extend({
      update: function (deltaTime    ){
          if(me.input.isKeyPressed("right")) {
              this.vel.x += this.accel.x * me.timer.tick;
+         }   
+         else if(me.input.isKeyPressed("left")) {
+             this.vel.x -= this.accel.x * me.timer.tick;
          }
+         
          else {
              this.vel.x = 0;
          }
