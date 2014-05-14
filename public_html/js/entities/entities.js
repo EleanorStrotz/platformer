@@ -13,12 +13,8 @@ game.PlayerEntity = me.ObjectEntity.extend({
        this.renderable.setCurrentAnimation("idle");
        
        this.setVelocity(5, 20);
-       this.setVelocity(5, 20);
-       this.setVelocity(5, 20);
-       
        me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
-       
-       me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
+
     },
             
      update: function (deltaTime    ){
@@ -27,6 +23,9 @@ game.PlayerEntity = me.ObjectEntity.extend({
          }   
          else if(me.input.isKeyPressed("left")) {
              this.vel.x -= this.accel.x * me.timer.tick;
+         }
+         else if(me.input.isKeyPressed("jump")) {
+             this.vel.y -= this.accel.y * me.timer.tick;
          }
          
          else {
